@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Hostel Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="app-shell" id="dashboard">
+        <aside class="sidebar">
+            <a class="brand" href="#dashboard" aria-label="Hostel management home">
+                <span class="brand-mark">H</span>
+                <span class="brand-name">Hostel<span>MANAGEMENT</span></span>
+            </a>
+
+            <p class="nav-caption">WORKSPACE</p>
+            <nav class="side-nav" aria-label="Main navigation">
+                <a class="nav-link active" href="#dashboard"><span class="nav-icon">⌂</span>Overview</a>
+                <a class="nav-link" href="#students"><span class="nav-icon">♙</span>Students</a>
+                <a class="nav-link" href="#rooms"><span class="nav-icon">▦</span>Rooms</a>
+                <a class="nav-link" href="#fees"><span class="nav-icon">＄</span>Fee collection</a>
+            </nav>
+
+            <div class="sidebar-note">
+                <span class="note-icon">✦</span>
+                <p>Your hostel, a little more organized.</p>
+            </div>
+            <div class="sidebar-footer">HOSTEL ADMINISTRATION<br><span>Management workspace</span></div>
+        </aside>
+
+        <main class="main-content">
+            <header class="page-header">
+                <div>
+                    <p class="eyebrow">HOSTEL OPERATIONS</p>
+                    <h1>Overview</h1>
+                    <p class="page-subtitle">Manage student records, room assignments, and fees.</p>
+                </div>
+                <div class="workspace-badge"><span class="online-dot"></span> Management panel</div>
+            </header>
+
+            <section class="welcome-banner" aria-label="Welcome">
+                <div class="banner-copy">
+                    <p class="banner-eyebrow">YOUR HOSTEL DASHBOARD</p>
+                    <h2>Everything in its place.</h2>
+                    <p>Keep track of residents and rooms from one simple workspace.</p>
+                </div>
+                <a class="banner-button" href="#students">Add a student <span aria-hidden="true">→</span></a>
+                <span class="banner-decoration" aria-hidden="true">⌂</span>
+            </section>
+
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">QUICK MANAGEMENT</p>
+                    <h2>Hostel essentials</h2>
+                </div>
+                <p class="section-hint">Your updates are saved in this browser.</p>
+            </div>
+
+            <div class="content-grid">
+                <section class="card" id="students" aria-labelledby="add-student-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-purple">＋</span>
+                        <div>
+                            <h3 id="add-student-title">Add new student</h3>
+                            <p>Create a student record</p>
+                        </div>
+                    </div>
+                    <form id="studentForm" class="form-stack">
+                        <label for="studentName">Student name</label>
+                        <input type="text" id="studentName" placeholder="e.g. Alex Morgan" required>
+                        <div class="form-row">
+                            <div>
+                                <label for="studentAge">Age</label>
+                                <input type="number" id="studentAge" placeholder="e.g. 19" required>
+                            </div>
+                            <div>
+                                <label for="studentRoom">Room number</label>
+                                <input type="text" id="studentRoom" placeholder="Enter room number" required>
+                            </div>
+                        </div>
+                        <button class="primary-button" type="submit">Add student <span aria-hidden="true">→</span></button>
+                    </form>
+                </section>
+
+                <section class="card" aria-labelledby="student-list-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-blue">♙</span>
+                        <div>
+                            <h3 id="student-list-title">Student details</h3>
+                            <p>Residents currently on record</p>
+                        </div>
+                    </div>
+                    <ul id="studentList" class="record-list" aria-live="polite"></ul>
+                </section>
+
+                <section class="card" id="rooms" aria-labelledby="assign-room-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-orange">▦</span>
+                        <div>
+                            <h3 id="assign-room-title">Assign a room</h3>
+                            <p>Connect a student with a room</p>
+                        </div>
+                    </div>
+                    <form id="assignRoomForm" class="form-stack">
+                        <label for="studentNameAssign">Student name</label>
+                        <input type="text" id="studentNameAssign" placeholder="Enter the student's name" required>
+                        <label for="roomNumberAssign">Room number</label>
+                        <input type="text" id="roomNumberAssign" placeholder="e.g. 101" required>
+                        <button class="primary-button" type="submit">Assign room <span aria-hidden="true">→</span></button>
+                    </form>
+                </section>
+
+                <section class="card" aria-labelledby="available-rooms-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-green">⌂</span>
+                        <div>
+                            <h3 id="available-rooms-title">Available rooms</h3>
+                            <p>Rooms ready for assignment</p>
+                        </div>
+                    </div>
+                    <ul id="roomList" class="record-list room-list" aria-live="polite"></ul>
+                </section>
+
+                <section class="card" id="fees" aria-labelledby="fees-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-green">＄</span>
+                        <div>
+                            <h3 id="fees-title">Collect hostel fees</h3>
+                            <p>Record a student's payment</p>
+                        </div>
+                    </div>
+                    <form id="feesForm" class="form-stack">
+                        <label for="studentNameFees">Student name</label>
+                        <input type="text" id="studentNameFees" placeholder="Enter the student's name" required>
+                        <label for="amountPaid">Amount paid</label>
+                        <input type="number" id="amountPaid" placeholder="Enter amount" required>
+                        <button class="primary-button" type="submit">Submit fees <span aria-hidden="true">→</span></button>
+                    </form>
+                </section>
+
+                <section class="card" aria-labelledby="checkout-title">
+                    <div class="card-heading">
+                        <span class="card-icon icon-red">↗</span>
+                        <div>
+                            <h3 id="checkout-title">Check out student</h3>
+                            <p>Remove a student from the records</p>
+                        </div>
+                    </div>
+                    <form id="checkoutForm" class="form-stack">
+                        <label for="studentNameCheckout">Student name</label>
+                        <input type="text" id="studentNameCheckout" placeholder="Enter the student's name" required>
+                        <button class="secondary-button" type="submit">Check out student</button>
+                    </form>
+                </section>
+            </div>
+            <footer class="page-footer">Hostel Management <span>·</span> Your data stays in this browser</footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

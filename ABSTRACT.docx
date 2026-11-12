@@ -1,0 +1,9 @@
+Hostel management system
+Abstract: 
+The Hostel Management System is a web-based application designed to streamline hostel administration by managing student accommodations efficiently. The system provides functionalities such as adding new students, assigning rooms, checking out students, tracking room availability, collecting hostel fees, and displaying student details.
+Developed using HTML, CSS, and JavaScript, this application allows hostel administrators to store and retrieve student and room records dynamically. The use of local storage ensures that data remains available even after page reloads. The system enhances efficiency by reducing manual paperwork, ensuring accurate student and room records, and improving the overall hostel management experience.
+By offering an easy-to-use interface and automated functions, this Hostel Management System simplifies operations, minimizes errors, and ensures smooth hostel administration.
+
+
+
+
