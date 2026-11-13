@@ -2,6 +2,8 @@
 
 A lightweight hostel management dashboard built with HTML, CSS, and vanilla JavaScript. It runs in a web browser and does not require a package install or backend server.
 
+Click here to take a look on website : https://hostelmanagementsystem-one.vercel.app
+
 ## Run the app
 
 ### Open the HTML file
